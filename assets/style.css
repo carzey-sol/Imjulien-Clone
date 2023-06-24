@@ -52,7 +52,7 @@ body{
     background-color: white;
 }
 
-#rotate-arrow:hover{
+.talk #rotate-arrow:hover{
     transition: 0.3s;
 transform: rotate(200deg);
 transition-timing-function: ease-in-out;
@@ -68,6 +68,25 @@ transition-timing-function: ease-in-out;
     
 
 }
+
+/* intro  */
+.intro{
+    max-width: 60%;
+    margin-top: 15%;
+    position: absolute;
+    left: 15%;
+}
+.intro .big-text{
+     font-size: 5rem;
+     line-height: 1.2;
+}
+.description{
+    max-width: 250px;
+    line-height: 26px;
+    font-weight: 200;
+    
+    margin-top: 50px;
+}
 /* cursor */
 .cursor{
     position: fixed;
@@ -81,6 +100,5 @@ transition-timing-function: ease-in-out;
     pointer-events: none;
     mix-blend-mode: difference;
 }
-
 
 
