@@ -1,4 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+*{
+    scroll-behavior: smooth;
+}
 body{
     max-width: 100%;
     max-height: 100%;
@@ -7,9 +10,19 @@ body{
     font-family: poppins;
     font-size: 16px;
 }
+
 .navigation{
-    display: flex;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    
 }
 .bold-nav{
     font-weight: bold;
@@ -19,14 +32,16 @@ body{
    
 }
 
-left-nav{
+/* left-nav{
     display: inline-block;
+   
   
 }
 .talk{
     display: inline-block;
+     */
 
-}
+/* } */
 .talk span a{
     color: white;
     text-decoration: none;
@@ -36,13 +51,7 @@ left-nav{
     width: 100px;
     background-color: white;
 }
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px;
-    font-size: 20px;
-}
+
 #rotate-arrow:hover{
     transition: 0.3s;
 transform: rotate(200deg);
@@ -52,12 +61,26 @@ transition-timing-function: ease-in-out;
 .side-btn img{
     
    display: block;
-   margin-left: 96%;
-   width: 60px;
-   margin-top: 10%;
+   margin-left: 97%;
+   width: 50px;
+   margin-top: 20%;
    position: fixed;
     
 
 }
+/* cursor */
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    scroll-behavior: smooth;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
 
 
