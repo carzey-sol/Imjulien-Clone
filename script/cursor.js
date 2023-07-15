@@ -1,5 +1,6 @@
-const cursor = document.querySelector('.cursor');
+
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.pageX + 'px';
-    cursor.style.top = e.pageY + 'px';
+    var cursor = document.querySelector('.cursor');
+    cursor.style.left = event.clientX + 'px';
+    cursor.style.top = event.clientY + 'px';
 })
