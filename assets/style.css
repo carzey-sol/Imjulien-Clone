@@ -174,14 +174,18 @@ transition-timing-function: ease-in-out;
   /* images */
   .work-int{
     margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 200px; */
   }
   .left-img{
     width: 400px;
-    margin-left: 500px;
+    margin-left: 400px;
     margin-top: 50px;
   }
   .left-img .higetech img{
     width: 100%;
+    margin-top: 200px;
   }
   .circle-button{
     position: absolute;
@@ -194,8 +198,30 @@ transition-timing-function: ease-in-out;
     margin-left: 340px;
     align-items: center;
     justify-content: center;
+
   }
-  
+  .higetech h1{
+     font-size: 40px;
+     padding: 10px;
+  }
+  .higetech p{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 250;
+  }
+  /* right */
+  .right-img{
+    position: absolute;
+    width: 400px;
+    /* margin-left: 1000px;
+    margin-top: -1500px; */
+    margin-left: 55%;
+    margin-top: 300px;
+  }
+  .right-img .higetech img{
+    width: 100%;
+    margin-top: 200px;
+  }
 /* cursor */
 .cursor::before{
     opacity: 0;
