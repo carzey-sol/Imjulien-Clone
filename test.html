@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSSPlugin Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+</head>
+<body>
+    <style>
+        .left {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.right {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  vertical-align: top;
+}
+
+          </style>
+  <div id="container">
+    <div class="left">
+      <img src="https://placekitten.com/300/300" />
+      <img src="https://placekitten.com/300/300" />
+      <img src="https://placekitten.com/300/300" />
+    </div>
+    <div class="right">
+      <img src="https://placekitten.com/300/300" />
+      <img src="https://placekitten.com/300/300" />
+    </div>
+  </div>
+  <script>
+    var container = document.getElementById("container");
+    var leftImages = container.querySelectorAll(".left img");
+    var rightImages = container.querySelectorAll(".right img");
+
+    // Create a CSSPlugin instance
+    var plugin = new CSSPlugin(gsap.timeline());
+
+    // Set the scroll speed for the left and right images
+    plugin.set(leftImages, "scrollSpeed", 2);
+    plugin.set(rightImages, "scrollSpeed", 1);
+
+    // When the div scrolls to the bottom, align the last images on both sides
+    gsap.on("scrollEnd", container, function() {
+      var lastLeftImage = leftImages[leftImages.length - 1];
+      var lastRightImage = rightImages[rightImages.length - 1];
+      plugin.set(lastLeftImage, "left", lastRightImage.offsetLeft);
+    });
+  </script>
+</body>
+</html>
